@@ -1,6 +1,6 @@
 package com.madbad;
 
-public class Horse{
+public class Horse implements Transported{
     private String name;
 
     public Horse(String name) {
@@ -9,7 +9,12 @@ public class Horse{
 
     @Override
     public String toString() {
-        return name + " Go out to fields";
+        return name + " Go out to fields" + toTrans();
     }
 
+
+    @Override
+    public String toTrans() {
+        return " ride the kids";
+    }
 }
